@@ -2,7 +2,7 @@
 // Created by 浩 SHI on 2021/12/09.
 //
 #include <jni.h>
-#include <i_log.h> // include_directories(${CMAKE_SOURCE_DIR}/examples/framework/utility/debug/)
+#include <i_log.h> // include_directories(${CMAKE_SOURCE_DIR}/framework/utility/debug/)
 
 // 安卓端所对应的类名(包含完全地址)
 #define JAVA_CLASS "com/swein/androidndktool/examples/dynamicload/JNIDynamicLoad"

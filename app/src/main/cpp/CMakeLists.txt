@@ -32,7 +32,7 @@ ENDIF()
 message(${CMAKE_CURRENT_LIST_FILE})
 message(${CMAKE_CURRENT_LIST_DIR})
 
-include_directories(${CMAKE_SOURCE_DIR}/examples/framework/utility/debug/)
+include_directories(${CMAKE_SOURCE_DIR}/framework/utility/debug/)
 
 add_library( # Sets the name of the library.
         androidndktool
@@ -68,6 +68,23 @@ add_library(
         examples/dynamicload/jni_dynamic_load.cpp
 )
 
+add_library(
+        data_type-lib
+
+        SHARED
+
+        examples/datatype/data_type.cpp
+)
+
+add_library(
+        string_example-lib
+
+        SHARED
+
+        examples/stringexample/string_example.cpp
+)
+
+
 
 find_library( # Sets the name of the path variable.
         log-lib
@@ -83,16 +100,28 @@ find_library( # Sets the name of the path variable.
 
 target_link_libraries( # Specifies the target library.
         androidndktool
-        people-lib # 把我们自己添加的动态库people关联起来
-
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib}
 )
 
-
-target_link_libraries(
+target_link_libraries( # Specifies the target library.
         dynamic-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib}
+)
 
+target_link_libraries( # Specifies the target library.
+        data_type-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib}
+)
+
+target_link_libraries( # Specifies the target library.
+        string_example-lib
+        # Links the target library to the log library
+        # included in the NDK.
         ${log-lib}
 )
