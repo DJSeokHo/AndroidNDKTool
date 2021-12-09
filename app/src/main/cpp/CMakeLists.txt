@@ -84,6 +84,14 @@ add_library(
         examples/stringexample/string_example.cpp
 )
 
+add_library(
+        array_type-lib
+
+        SHARED
+
+        examples/arraytype/array_type.cpp
+)
+
 
 
 find_library( # Sets the name of the path variable.
@@ -121,6 +129,14 @@ target_link_libraries( # Specifies the target library.
 
 target_link_libraries( # Specifies the target library.
         string_example-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib}
+)
+
+
+target_link_libraries( # Specifies the target library.
+        array_type-lib
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib}

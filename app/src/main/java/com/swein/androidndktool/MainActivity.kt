@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.swein.androidndktool.databinding.ActivityMainBinding
+import com.swein.androidndktool.examples.arraytype.ArrayTypeActivity
 import com.swein.androidndktool.examples.basic.BasicExampleActivity
 import com.swein.androidndktool.examples.datatype.DataTypeExampleActivity
 import com.swein.androidndktool.examples.dynamicload.DynamicLoadExampleActivity
@@ -31,7 +32,11 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(this)
 //        }
 
-        Intent(this, StringExampleActivity::class.java).apply {
+//        Intent(this, StringExampleActivity::class.java).apply {
+//            startActivity(this)
+//        }
+
+        Intent(this, ArrayTypeActivity::class.java).apply {
             startActivity(this)
         }
 

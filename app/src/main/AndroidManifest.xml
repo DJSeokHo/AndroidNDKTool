@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidNDKTool">
         <activity
+            android:name=".examples.arraytype.ArrayTypeActivity"
+            android:exported="false" />
+        <activity
             android:name=".examples.stringexample.StringExampleActivity"
             android:exported="false" />
         <activity
