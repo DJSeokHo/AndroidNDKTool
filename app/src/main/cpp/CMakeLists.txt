@@ -65,7 +65,7 @@ add_library(
 
         SHARED
 
-        examples/dynamicload/jni_dynamic_load.cpp
+        examples/dynamic_load/jni_dynamic_load.cpp
 )
 
 add_library(
@@ -73,7 +73,7 @@ add_library(
 
         SHARED
 
-        examples/datatype/data_type.cpp
+        examples/datat_ype/data_type.cpp
 )
 
 add_library(
@@ -81,7 +81,7 @@ add_library(
 
         SHARED
 
-        examples/stringexample/string_example.cpp
+        examples/string_example/string_example.cpp
 )
 
 add_library(
@@ -89,9 +89,16 @@ add_library(
 
         SHARED
 
-        examples/arraytype/array_type.cpp
+        examples/array_type/array_type.cpp
 )
 
+add_library(
+        object_field-lib
+
+        SHARED
+
+        examples/object_field/object_field.cpp
+)
 
 
 find_library( # Sets the name of the path variable.
@@ -141,3 +148,10 @@ target_link_libraries( # Specifies the target library.
         # included in the NDK.
         ${log-lib}
 )
+
+target_link_libraries( # Specifies the target library.
+        object_field-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib}
+        )
