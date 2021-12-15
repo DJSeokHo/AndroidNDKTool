@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidNDKTool">
         <activity
+            android:name=".examples.referenceexample.ReferenceExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".examples.create_object_in_cpp_and_return_it_to_app_end.CreateObjectInCppAndReturnItToAppActivity"
+            android:exported="false" />
+        <activity
             android:name=".examples.interfacecallbackexample.InterfaceCallbackExampleActivity"
             android:exported="false" />
         <activity

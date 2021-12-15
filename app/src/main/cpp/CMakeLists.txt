@@ -116,6 +116,15 @@ add_library(
         examples/interface_callback_example/interface_callback_example.cpp
 )
 
+add_library(
+        create_object_in_cpp_and_return_it_to_app-lib
+
+        SHARED
+
+        examples/create_object_in_cpp_and_return_it_to_app_end/create_object_in_cpp_and_return_it_to_app.cpp
+)
+
+
 
 find_library( # Sets the name of the path variable.
         log-lib
@@ -181,6 +190,13 @@ target_link_libraries( # Specifies the target library.
 
 target_link_libraries( # Specifies the target library.
         interface_callback_example-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib}
+)
+
+target_link_libraries( # Specifies the target library.
+        create_object_in_cpp_and_return_it_to_app-lib
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib}

@@ -6,11 +6,13 @@ import android.os.Bundle
 import com.swein.androidndktool.databinding.ActivityMainBinding
 import com.swein.androidndktool.examples.arraytype.ArrayTypeActivity
 import com.swein.androidndktool.examples.basic.BasicExampleActivity
+import com.swein.androidndktool.examples.create_object_in_cpp_and_return_it_to_app_end.CreateObjectInCppAndReturnItToAppActivity
 import com.swein.androidndktool.examples.datatype.DataTypeExampleActivity
 import com.swein.androidndktool.examples.dynamicload.DynamicLoadExampleActivity
 import com.swein.androidndktool.examples.interfacecallbackexample.InterfaceCallbackExampleActivity
 import com.swein.androidndktool.examples.objectfieldexample.ObjectFieldExampleActivity
 import com.swein.androidndktool.examples.objectmethodexample.ObjectMethodExampleActivity
+import com.swein.androidndktool.examples.referenceexample.ReferenceExampleActivity
 import com.swein.androidndktool.examples.stringexample.StringExampleActivity
 
 class MainActivity : AppCompatActivity() {
@@ -51,8 +53,17 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(this)
 //        }
 
-        Intent(this, InterfaceCallbackExampleActivity::class.java).apply {
+//        Intent(this, InterfaceCallbackExampleActivity::class.java).apply {
+//            startActivity(this)
+//        }
+
+//        Intent(this, CreateObjectInCppAndReturnItToAppActivity::class.java).apply {
+//            startActivity(this)
+//        }
+
+        Intent(this, ReferenceExampleActivity::class.java).apply {
             startActivity(this)
         }
+
     }
 }
