@@ -100,6 +100,14 @@ add_library(
         examples/object_field/object_field.cpp
 )
 
+add_library(
+        object_method-lib
+
+        SHARED
+
+        examples/object_method/object_method.cpp
+)
+
 
 find_library( # Sets the name of the path variable.
         log-lib
@@ -154,4 +162,11 @@ target_link_libraries( # Specifies the target library.
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib}
-        )
+)
+
+target_link_libraries( # Specifies the target library.
+        object_method-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib}
+)

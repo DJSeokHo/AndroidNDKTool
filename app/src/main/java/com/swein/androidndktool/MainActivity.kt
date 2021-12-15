@@ -9,6 +9,7 @@ import com.swein.androidndktool.examples.basic.BasicExampleActivity
 import com.swein.androidndktool.examples.datatype.DataTypeExampleActivity
 import com.swein.androidndktool.examples.dynamicload.DynamicLoadExampleActivity
 import com.swein.androidndktool.examples.objectfieldexample.ObjectFieldExampleActivity
+import com.swein.androidndktool.examples.objectmethodexample.ObjectMethodExampleActivity
 import com.swein.androidndktool.examples.stringexample.StringExampleActivity
 
 class MainActivity : AppCompatActivity() {
@@ -41,8 +42,13 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(this)
 //        }
 
-        Intent(this, ObjectFieldExampleActivity::class.java).apply {
+//        Intent(this, ObjectFieldExampleActivity::class.java).apply {
+//            startActivity(this)
+//        }
+
+        Intent(this, ObjectMethodExampleActivity::class.java).apply {
             startActivity(this)
         }
+
     }
 }
