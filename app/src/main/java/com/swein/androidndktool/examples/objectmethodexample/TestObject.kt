@@ -4,6 +4,15 @@ import com.swein.androidndktool.framework.utility.debug.ILog
 
 class TestObject {
 
+    companion object {
+
+        fun callStaticMethod(str: String): String {
+            ILog.debug("TestObject", "callStaticMethod $str")
+            return ""
+        }
+
+    }
+
     fun callInstanceMethod(str: String): String {
         ILog.debug("TestObject", "callInstanceMethod $str")
         return ""

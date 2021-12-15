@@ -34,4 +34,12 @@ Java_com_swein_androidndktool_examples_objectmethodexample_JNIObjectMethodExampl
     }
     env->CallObjectMethod(test_object, mid4, str_array, 5);
 
+
+    // call method in companion object as static method
+    jfieldID companion_fid = env->GetStaticFieldID(cls, "Companion", "Lcom/swein/androidndktool/examples/objectmethodexample/TestObject$Companion;");
+    jobject companion_obj = env->GetStaticObjectField(cls, companion_fid);
+    jclass companion_cls = env->GetObjectClass(companion_obj);
+    jmethodID mid5 = env->GetMethodID(companion_cls, "callStaticMethod", "(Ljava/lang/String;)Ljava/lang/String;");
+    jstring str1 = env->NewStringUTF("jstring~~~");
+    env->CallObjectMethod(companion_obj, mid5, str1);
 }
