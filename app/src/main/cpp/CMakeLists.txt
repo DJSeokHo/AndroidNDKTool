@@ -124,6 +124,21 @@ add_library(
         examples/create_object_in_cpp_and_return_it_to_app_end/create_object_in_cpp_and_return_it_to_app.cpp
 )
 
+add_library(
+        reference_example-lib
+
+        SHARED
+
+        examples/reference_example/reference_example.cpp
+)
+
+add_library(
+        exception_example-lib
+
+        SHARED
+
+        examples/exception_example/exception_example.cpp
+)
 
 
 find_library( # Sets the name of the path variable.
@@ -197,6 +212,20 @@ target_link_libraries( # Specifies the target library.
 
 target_link_libraries( # Specifies the target library.
         create_object_in_cpp_and_return_it_to_app-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib}
+)
+
+target_link_libraries(
+        reference_example-lib
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib}
+)
+
+target_link_libraries(
+        exception_example-lib
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib}

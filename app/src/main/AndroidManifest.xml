@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidNDKTool">
         <activity
+            android:name=".examples.exceptionexample.ExceptionExampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".examples.referenceexample.ReferenceExampleActivity"
             android:exported="false" />
         <activity

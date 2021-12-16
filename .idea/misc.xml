@@ -6,8 +6,10 @@
         <entry key="app/src/main/res/layout/activity_basic_example.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/layout/activity_create_object_in_cpp_and_return_it_to_app.xml" value="0.26197916666666665" />
         <entry key="app/src/main/res/layout/activity_dynamic_register_example.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/layout/activity_exception_example.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/activity_interface_callback_example.xml" value="0.2760416666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1859375" />
+        <entry key="app/src/main/res/layout/activity_reference_example.xml" value="0.1" />
       </map>
     </option>
   </component>
